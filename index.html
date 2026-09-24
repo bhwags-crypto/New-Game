@@ -16,12 +16,26 @@
     <div class="ledger" id="ledger"></div>
   </header>
   <main class="main">
-    <section class="stage" id="stage" aria-label="Chart and field view">
+    <section class="stage" id="stage" aria-label="Map">
       <canvas id="cv"></canvas>
       <div class="zoom" id="zoom">
         <button class="btn icon" id="z-in" aria-label="Zoom in">+</button>
         <button class="btn icon" id="z-out" aria-label="Zoom out">&minus;</button>
-        <button class="btn icon" id="z-fit" aria-label="Fit chart">&#9723;</button>
+        <button class="btn icon" id="z-fit" aria-label="Fit to screen">&#9723;</button>
+      </div>
+      <div class="clock" id="clock" hidden></div>
+      <div class="legend" id="legend">
+        <button class="btn sm" id="legend-toggle" aria-controls="legend-body">Key to the chart</button>
+        <div class="legend-body" id="legend-body">
+          <ul class="inks">
+            <li><i class="sw ink"></i>Surveyed with confidence</li>
+            <li><i class="sw doubt"></i>Doubtful: the surveyor was unsure</li>
+            <li><i class="sw told"></i>Described by villagers</li>
+            <li><i class="sw pencil"></i>Pencil: field notes not yet inked</li>
+            <li><i class="sw faded"></i>Faded: old information</li>
+          </ul>
+          <ul class="feats" id="legend-feats"></ul>
+        </div>
       </div>
       <div class="tip" id="tip" hidden></div>
       <div class="toast" id="toast" role="status" hidden></div>
@@ -32,9 +46,16 @@
     <div class="modal" role="dialog" aria-modal="true"><div id="modal-body"></div></div>
   </div>
 </div>
+<script src="js/core.js"></script>
 <script src="js/world.js"></script>
+<script src="js/data.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/field.js"></script>
+<script src="js/local.js"></script>
 <script src="js/game.js"></script>
+<script src="js/expedition.js"></script>
+<script src="js/council.js"></script>
+<script src="js/founding.js"></script>
+<script src="js/epilogue.js"></script>
 </body>
 </html>
