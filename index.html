@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Landfall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" data-mode="camp">
+  <header class="bar">
+    <h1 class="brand">Landfall</h1>
+    <div class="ledger" id="ledger"></div>
+  </header>
+  <main class="main">
+    <section class="stage" id="stage" aria-label="Chart and field view">
+      <canvas id="cv"></canvas>
+      <div class="zoom" id="zoom">
+        <button class="btn icon" id="z-in" aria-label="Zoom in">+</button>
+        <button class="btn icon" id="z-out" aria-label="Zoom out">&minus;</button>
+        <button class="btn icon" id="z-fit" aria-label="Fit chart">&#9723;</button>
+      </div>
+      <div class="tip" id="tip" hidden></div>
+      <div class="toast" id="toast" role="status" hidden></div>
+    </section>
+    <aside class="panel" id="panel"></aside>
+  </main>
+  <div class="modal-back" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true"><div id="modal-body"></div></div>
+  </div>
+</div>
+<script src="js/world.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/field.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
