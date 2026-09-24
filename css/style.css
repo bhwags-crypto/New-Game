@@ -26,6 +26,7 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { height: 100%; }
+@media (min-width: 901px) { html, body { overflow: hidden; } }
 body {
   margin: 0;
   background: var(--table);
@@ -187,8 +188,8 @@ body {
 
 .radios { display: flex; flex-direction: column; gap: 6px; }
 .radios.row { flex-direction: row; flex-wrap: wrap; }
-.radio { display: flex; cursor: pointer; }
-.radio input { position: absolute; opacity: 0; pointer-events: none; }
+.radio { display: flex; cursor: pointer; position: relative; }
+.radio input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
 .radio > span { flex: 1; display: flex; flex-direction: column; padding: 7px 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--table-2); }
 .radio strong { font-weight: 500; font-size: 15px; }
 .radio em { font-style: normal; font-size: 13px; color: var(--muted); }
@@ -366,8 +367,8 @@ ul.reactions li.ok::before { content: '\2713  '; color: #3f6a2a; }
 ul.reactions li.no::before { content: '\2717  '; color: #9b2a22; }
 
 .picks { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
-.pick { cursor: pointer; }
-.pick input { position: absolute; opacity: 0; pointer-events: none; }
+.pick { cursor: pointer; position: relative; }
+.pick input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
 .pick .card { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 10px 12px; border: 1px solid #c4ae86; background: var(--parch-2); border-radius: 2px; }
 .pick input:checked + .card { border-color: var(--ink); background: #f7eed8; box-shadow: inset 4px 0 0 var(--seal); }
 .pick input:focus-visible + .card { outline: 2px solid var(--seal); outline-offset: 1px; }
